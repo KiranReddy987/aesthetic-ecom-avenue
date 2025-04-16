@@ -2,21 +2,27 @@
 import { Search, ShoppingCart, User, ChevronDown } from "lucide-react"
 import { Button } from "./ui/button"
 import { Input } from "./ui/input"
+import { motion } from "framer-motion"
 
 export function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-white border-b">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
         <div className="flex items-center gap-6">
-          <a 
+          <motion.a 
             href="/" 
+            whileHover={{ 
+              scale: 1.05,
+              transition: { duration: 0.3 }
+            }}
+            whileTap={{ scale: 0.95 }}
             className="text-3xl font-logo font-semibold text-purple-600 
-            transition-transform hover:scale-105 
+            transition-transform 
             bg-gradient-to-r from-purple-600 to-pink-500 
             bg-clip-text text-transparent"
           >
             Quick & Quality
-          </a>
+          </motion.a>
           <Button variant="outline" className="hidden lg:flex items-center gap-2">
             Select Location <ChevronDown className="h-4 w-4" />
           </Button>
