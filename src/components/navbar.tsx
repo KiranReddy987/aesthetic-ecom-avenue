@@ -8,7 +8,13 @@ export function Navbar() {
     <nav className="sticky top-0 z-50 bg-white border-b">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
         <div className="flex items-center gap-6">
-          <a href="/" className="text-2xl font-bold text-purple-600">
+          <a 
+            href="/" 
+            className="text-3xl font-logo font-semibold text-purple-600 
+            transition-transform hover:scale-105 
+            bg-gradient-to-r from-purple-600 to-pink-500 
+            bg-clip-text text-transparent"
+          >
             Quick & Quality
           </a>
           <Button variant="outline" className="hidden lg:flex items-center gap-2">
